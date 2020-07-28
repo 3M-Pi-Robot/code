@@ -1,5 +1,5 @@
 a = 7
-b = 56
+b = 56.5
 print(a)
 print(b)
 print(a+b)
@@ -28,6 +28,6 @@ print(f[0][1])
 print(f[1])
 print(f[1][1])
 
-# print(a + c) # does not work!
+#print(a + c) # does not work!
 print(str(a)+c)
-print(a,c)
+print(a,c, "test")

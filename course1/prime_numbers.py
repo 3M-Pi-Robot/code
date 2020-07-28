@@ -1,10 +1,10 @@
-max_number = 20 # change this number to 1000 
+max_number = 100 # change this number to 1000 
 prime_numbers = []
 number=1
 
 while number < max_number:
     count=0
-    for i in range(1, len(prime_numbers)):
+    for i in prime_numbers:
         if number % i == 0:
             count=count+1
     if count < 2:
