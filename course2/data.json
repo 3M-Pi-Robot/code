@@ -1,0 +1,4 @@
+[{"pin":2,"name":"LED",
+"io":"in"},
+{"pin":4,"name":"SWITCH",
+"io":"out"}]
