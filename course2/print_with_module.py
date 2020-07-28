@@ -3,5 +3,8 @@
 
 import printonoff as p
 
-p.printOnOff(1)
-p.printOnOff(2)
+p.first(1)
+p.first(2)
+
+p.second()
+

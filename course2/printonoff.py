@@ -1,10 +1,13 @@
 # function / module
 
-def printOnOff(input):
+def first(input):
     if(input==1):
         print("On")
     else:
         print("Off")
+
+def second():
+    print("test")
               
-# printOnOff(1)
-# printOnOff(34)
+# first(1)
+# second()
