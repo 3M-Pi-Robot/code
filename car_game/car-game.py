@@ -10,6 +10,9 @@ pygame.init()
 ena=0
 enb=0
 
+trimfactor_ena = 1.01
+trimfactor_enb = 1.01
+
 pin.load("config.json")
 
 size = width, height =600,400
@@ -26,12 +29,12 @@ while True:
             sys.exit
         elif event.type == KEYDOWN and event.key == K_w: # foreward
             print("w - foreward")
-            ena +=10
-            enb +=10
+            ena +=15
+            enb +=15
         elif event.type == KEYDOWN and event.key == K_s: # backward
             print("s - backward")
-            ena -=10
-            enb -=10
+            ena -=15
+            enb -=15
         elif event.type == KEYDOWN and event.key == K_a: # left
             print("a-left")
             ena +=5
@@ -45,9 +48,10 @@ while True:
             enb=0
 
         # set the motor speed    
-        if(ena>=0):
-            ena = min(ena, 100)
-            pin.Level("ENA",ena)
+        if(ena>=0):            
+            ena_trim=ena*trimfactor_ena
+            ena_trim = min(ena_trim, 100)
+            pin.Level("ENA",ena_trim)
             pin.Out("IN1",0)
             pin.Out("IN2",1)
         else:
@@ -62,7 +66,8 @@ while True:
             pin.Out("IN3",1)
             pin.Out("IN4",0)
         else:
-            enb_minus = abs(enb) 
+            enb_minus = abs(enb)
+            ena_minus *= trimfactor_enb
             enb_minus = min(enb_minus, 100)
             pin.Level("ENB",enb_minus)
             pin.Out("IN3",0)
