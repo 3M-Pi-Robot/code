@@ -1,8 +1,0 @@
-[
-{"pin":2,
-"name":"LED1",
-"io":"out"},
-{"pin":4,
-"name":"LED2",
-"io":"out"}
-]
