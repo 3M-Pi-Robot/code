@@ -1,0 +1,8 @@
+[
+{"pin":11,"name":"ENA","io":"pwm"},
+{"pin":9,"name":"IN1","io":"out"},
+{"pin":10,"name":"IN2","io":"out"},
+{"pin":13,"name":"ENB","io":"pwm"},
+{"pin":19,"name":"IN3","io":"out"},
+{"pin":26,"name":"IN4","io":"out"}
+]
