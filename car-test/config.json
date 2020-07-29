@@ -1,0 +1,5 @@
+[
+{"pin":11,"name":"ENA","io":"out"},
+{"pin":9,"name":"IN1","io":"out"},
+{"pin":10,"name":"IN2","io":"out"}
+]
