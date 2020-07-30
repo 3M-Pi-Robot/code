@@ -7,7 +7,9 @@ import time
 pin.load("config.json")
 
 
-queue = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,1,0]]
+queue = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
+
+inN = ["1N1","1N2","1N3","1N4"]
 
 state = 0
 position =0
@@ -19,7 +21,7 @@ while (position < destinationCount):
     pin.Out("1N2", queue[state][1])
     pin.Out("1N3", queue[state][2])
     pin.Out("1N4", queue[state][3])
-    time.sleep(0.005)
+    time.sleep(0.05)
     state+=1
     if(state>3):
         state=0
