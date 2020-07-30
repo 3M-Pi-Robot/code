@@ -1,0 +1,6 @@
+[
+{"pin":12,"name":"1N1","io":"out"},
+{"pin":16,"name":"1N2","io":"out"},
+{"pin":20,"name":"1N3","io":"out"},
+{"pin":21,"name":"1N4","io":"out"}
+]
