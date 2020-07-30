@@ -17,14 +17,15 @@ destinationCount = 1024
 
 
 while (position < destinationCount):
-    pin.Out("1N1", queue[state][0])
-    pin.Out("1N2", queue[state][1])
-    pin.Out("1N3", queue[state][2])
-    pin.Out("1N4", queue[state][3])
+    # perfect place for loop!    
+    for i in range(0,4):
+        pin.Out(inN[i], queue[state][i])
+    
     time.sleep(0.05)
     state+=1
-    if(state>3):
-        state=0
+    
+    state =state % 4 # super fancy trick ... ;-)
+        
     position+=1
 
 pin.cleanup()            
