@@ -4,25 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robot Car</title>
+    
+<script>
+function move(left,right){
+    var href = "/move/" + left + "/" + right;
+    console.log(href)
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", href , true);
+    xhttp.send();  
+}
+
+</script>    
+    
+    
   </head>
   <body>
-
-<div
-style="position:absolute;
-left:100px;
-top:10px;
-width:100px;
-height:20px;
-padding:10px;
-background-color:#668866;
-color:#cccccc;
-font-family:arial;
-font-size:16px;"
-
-onclick="window.location.href='/move/80/80';"
->
-FOREWARD
-</div>
 
 <div
 style="position:absolute;
@@ -36,10 +32,29 @@ color:#cccccc;
 font-family:arial;
 font-size:16px;"
 
-onclick="window.location.href='/move/-80/-80';"
+onclick="move(-80,-80);"
 >
 BACKWARD
 </div>
+
+
+<div
+style="position:absolute;
+left:100px;
+top:10px;
+width:100px;
+height:20px;
+padding:10px;
+background-color:#668866;
+color:#cccccc;
+font-family:arial;
+font-size:16px;"
+
+onclick="move(80,80);"
+>
+FOREWARD
+</div>
+
 
 
 <div
@@ -53,8 +68,7 @@ background-color:#886688;
 color:#cccccc;
 font-family:arial;
 font-size:16px;"
-
-onclick="window.location.href='/move/40/60';"
+onclick="move(40,60);"
 >
 LEFT
 </div>
@@ -71,7 +85,7 @@ color:#cccccc;
 font-family:arial;
 font-size:16px;"
 
-onclick="window.location.href='/move/60/40';"
+onclick="move(60,40);"
 >
 RIGHT
 </div>
@@ -88,7 +102,7 @@ color:#cccccc;
 font-family:arial;
 font-size:16px;"
 
-onclick="window.location.href='/move/60/0';"
+onclick="move(60,0);"
 >
 TURN<br>
 RIGHT
@@ -106,7 +120,7 @@ color:#cccccc;
 font-family:arial;
 font-size:16px;"
 
-onclick="window.location.href='/move/0/60';"
+onclick="move(0,60);"
 >
 TURN<br>
 LEFT
@@ -127,7 +141,7 @@ color:#ffffff;
 font-family:arial;
 font-size:24px;"
 
-onclick="window.location.href='/move/0/0';"
+onclick="move(0,0);"
 >
 STOP
 </div>
@@ -135,7 +149,6 @@ STOP
 
   </body>
 </html>
-
 
 
 
